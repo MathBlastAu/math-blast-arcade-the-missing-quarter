@@ -1,0 +1,209 @@
+{
+ "sheets": {
+  "gpad": {
+   "file": "sprites/gpad.png",
+   "fw": 32,
+   "fh": 12,
+   "anims": {
+    "up": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": true
+    },
+    "down": {
+     "frames": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  },
+  "pod": {
+   "file": "sprites/pod.png",
+   "fw": 48,
+   "fh": 24,
+   "names": {
+    "idle": 0,
+    "correct": 1,
+    "wrong": 2,
+    "done": 3
+   }
+  },
+  "barrier": {
+   "file": "sprites/barrier.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "on": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  "sign_display": {
+   "file": "sprites/sign_display.png",
+   "fw": 32,
+   "fh": 32,
+   "names": {
+    "normal": 0,
+    "good": 1,
+    "bad": 2
+   }
+  },
+  "mine": {
+   "file": "sprites/mine.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "pulse": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  "zap_emitter": {
+   "file": "sprites/zap_emitter.png",
+   "fw": 16,
+   "fh": 16,
+   "names": {
+    "idle": 0,
+    "firing": 1
+   }
+  },
+  "zap_arc": {
+   "file": "sprites/zap_arc.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "arc": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 16,
+     "loop": true
+    }
+   }
+  },
+  "steam": {
+   "file": "sprites/steam.png",
+   "fw": 16,
+   "fh": 32,
+   "anims": {
+    "puff": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  "spikes": {
+   "file": "sprites/spikes.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "shimmer": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  "bolt": {
+   "file": "sprites/bolt.png",
+   "fw": 24,
+   "fh": 8,
+   "anims": {
+    "fly": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 14,
+     "loop": true
+    }
+   }
+  },
+  "orb": {
+   "file": "sprites/orb.png",
+   "fw": 12,
+   "fh": 12,
+   "anims": {
+    "pulse": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  "decor": {
+   "file": "sprites/decor.png",
+   "fw": 32,
+   "fh": 32,
+   "names": {
+    "crate": 0,
+    "crate_stack": 1,
+    "barrel": 2,
+    "barrel_cyan": 3,
+    "cone": 4,
+    "toolbox": 5,
+    "sign_right": 6,
+    "sign_up": 7,
+    "sign_warning": 8,
+    "sign_fuel": 9,
+    "terminal_small": 10,
+    "plant_pot": 11,
+    "lamp_post": 12,
+    "pipe_valve": 13,
+    "monitor_wall": 14,
+    "fan_vent": 15,
+    "cable_coil": 16,
+    "robot_parts": 17,
+    "bench": 18,
+    "fuel_hose": 19
+   }
+  }
+ }
+}

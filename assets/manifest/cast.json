@@ -1,0 +1,111 @@
+{
+ "sheets": {
+  "crawler": {
+   "file": "sprites/crawler.png",
+   "fw": 24,
+   "fh": 24,
+   "anims": {
+    "walk": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 10,
+     "loop": true
+    },
+    "squash": {
+     "frames": [
+      6,
+      7,
+      8
+     ],
+     "fps": 14,
+     "loop": false
+    }
+   }
+  },
+  "drone": {
+   "file": "sprites/drone.png",
+   "fw": 24,
+   "fh": 24,
+   "anims": {
+    "hover": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 10,
+     "loop": true
+    },
+    "alert": {
+     "frames": [
+      6,
+      7
+     ],
+     "fps": 8,
+     "loop": true
+    },
+    "pop": {
+     "frames": [
+      8,
+      9,
+      10
+     ],
+     "fps": 14,
+     "loop": false
+    }
+   }
+  },
+  "priya": {
+   "file": "sprites/priya.png",
+   "fw": 32,
+   "fh": 32,
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 5,
+     "loop": true
+    },
+    "talk": {
+     "frames": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  "portraits": {
+   "file": "sprites/portraits.png",
+   "fw": 48,
+   "fh": 48,
+   "names": {
+    "jake_neutral": 0,
+    "jake_happy": 1,
+    "jake_worried": 2,
+    "priya_neutral": 3,
+    "priya_smile": 4,
+    "phantom_neutral": 5,
+    "phantom_glitch": 6
+   }
+  }
+ }
+}

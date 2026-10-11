@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MB.Audio - test and audition page</title>
+<style>
+  body { font: 14px/1.4 system-ui, sans-serif; margin: 16px; background: #10131c; color: #dde3f0; }
+  h1 { font-size: 18px; } h2 { font-size: 14px; margin: 18px 0 6px; color: #9fb4ff; }
+  button { font: inherit; margin: 2px; padding: 5px 9px; border-radius: 6px; border: 1px solid #3a4666; background: #1c2233; color: inherit; cursor: pointer; }
+  button:hover { background: #2a3350; }
+  label { margin-right: 14px; white-space: nowrap; }
+  pre { background: #0a0c12; padding: 8px; border-radius: 6px; overflow: auto; }
+</style>
+<script>
+  // Variants used by run_tests.js (query string): they must be applied before audio.js loads.
+  (function () {
+    var q = location.search;
+    window.__errors = [];
+    window.addEventListener('error', function (e) { window.__errors.push('error: ' + e.message); });
+    window.addEventListener('unhandledrejection', function (e) { window.__errors.push('rejection: ' + (e.reason && e.reason.message || e.reason)); });
+    if (/noctx/.test(q)) { window.AudioContext = undefined; window.webkitAudioContext = undefined; }
+    if (/webkit/.test(q)) { window.webkitAudioContext = window.AudioContext; window.AudioContext = undefined; }
+    if (/blocked/.test(q)) {
+      // Headless Chromium does not enforce the autoplay policy, so it is imitated here: the
+      // context reports "suspended" and resume() stays pending until the page has had a real
+      // (trusted) input event, which is how Chrome/Safari behave. navigator.userActivation
+      // cannot be used for this: Playwright runs page.evaluate() as if inside a gesture.
+      (function () {
+        var Real = window.AudioContext, realState = Object.getOwnPropertyDescriptor(BaseAudioContext.prototype, 'state').get;
+        var gesture = false;
+        ['pointerdown', 'mousedown', 'keydown', 'touchend'].forEach(function (t) {
+          document.addEventListener(t, function (e) { if (e.isTrusted) gesture = true; }, true);
+        });
+        window.AudioContext = function (o) {
+          var c = new Real(o), realResume = c.resume.bind(c), allowed = false;
+          c.suspend();
+          Object.defineProperty(c, 'state', { configurable: true, get: function () { return allowed ? realState.call(c) : 'suspended'; } });
+          c.resume = function () {
+            if (gesture) { allowed = true; return realResume(); }
+            return new Promise(function () {});
+          };
+          return c;
+        };
+      })();
+    }
+    if (/legacy/.test(q)) {               // an old engine: no panner, no custom waves, no limiter parts
+      var P = (window.AudioContext || window.webkitAudioContext).prototype, B = window.BaseAudioContext && window.BaseAudioContext.prototype;
+      ['createStereoPanner', 'createPeriodicWave', 'createWaveShaper', 'createDynamicsCompressor'].forEach(function (k) {
+        try { Object.defineProperty(P, k, { value: undefined, configurable: true }); } catch (e) {}
+        try { if (B) Object.defineProperty(B, k, { value: undefined, configurable: true }); } catch (e) {}
+      });
+    }
+  })();
+</script>
+<script src="../../js/audio.js"></script>
+<script src="analysis.js"></script>
+</head>
+<body>
+<h1>MB.Audio - test and audition page</h1>
+<p>Open this file directly (file://) to listen to every track and effect. <code>node run_tests.js</code> drives the same page headlessly.</p>
+<div>
+  <button id="unlock">unlock()</button>
+  <button id="pause">pauseAll()</button>
+  <button id="resume">resumeAll()</button>
+  <button id="duck">duck(0.6)</button>
+  <button id="unduck">duck(0)</button>
+</div>
+<h2>Volume</h2>
+<div id="vols"></div>
+<h2>Music</h2>
+<div id="tracks"></div>
+<div>Boss intensity: <button data-int="0">0</button><button data-int="1">1</button><button data-int="2">2</button></div>
+<h2>Sound effects <label>pitch <input id="pitch" type="number" value="0" min="-12" max="12" style="width:4em"></label>
+  <label>pan <input id="pan" type="number" value="0" min="-1" max="1" step="0.5" style="width:4em"></label></h2>
+<div id="sfx"></div>
+<h2>debugInfo()</h2>
+<pre id="info"></pre>
+<script>
+  (function () {
+    var A = window.MB && window.MB.Audio;
+    if (!A) return;
+    A.init();
+    function el(tag, text, parent) { var e = document.createElement(tag); e.textContent = text; parent.appendChild(e); return e; }
+    document.getElementById('unlock').onclick = function () { A.unlock(); };
+    document.getElementById('pause').onclick = function () { A.pauseAll(); };
+    document.getElementById('resume').onclick = function () { A.resumeAll(); };
+    document.getElementById('duck').onclick = function () { A.duck(0.6, 0.3); };
+    document.getElementById('unduck').onclick = function () { A.duck(0, 0.3); };
+    ['master', 'music', 'sfx', 'voice'].forEach(function (k) {
+      var l = el('label', k + ' ', document.getElementById('vols')), r = document.createElement('input');
+      r.type = 'range'; r.min = 0; r.max = 1; r.step = 0.05; r.value = A.getVolume(k);
+      r.oninput = function () { A.setVolume(k, parseFloat(r.value)); };
+      l.appendChild(r);
+    });
+    A._test.tracks().concat([null]).forEach(function (t) {
+      el('button', t === null ? 'stop' : t, document.getElementById('tracks')).onclick = function () { A.unlock(); A.playMusic(t); };
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-int]'), function (b) {
+      b.onclick = function () { A.setIntensity(parseInt(b.getAttribute('data-int'), 10)); };
+    });
+    A._test.sfxNames().forEach(function (n) {
+      el('button', n, document.getElementById('sfx')).onclick = function () {
+        A.unlock();
+        A.sfx(n, { pitch: parseFloat(document.getElementById('pitch').value) || 0, pan: parseFloat(document.getElementById('pan').value) || 0 });
+      };
+    });
+    setInterval(function () {
+      var d = A.debugInfo(); delete d.warnings;
+      document.getElementById('info').textContent = JSON.stringify(d, null, 1);
+    }, 250);
+  })();
+</script>
+</body>
+</html>

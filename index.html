@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#05060c">
+<title>Math Blast Arcade — The Missing Quarter</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #05060c; overflow: hidden;
+    -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+    touch-action: none; overscroll-behavior: none; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #e6f1ff; }
+  #game { position: fixed; inset: 0; }
+  #game canvas { image-rendering: pixelated; image-rendering: crisp-edges; outline: none; }
+  #rotate { display: none; position: fixed; inset: 0; z-index: 10; background: #05060c; align-items: center; justify-content: center;
+    flex-direction: column; text-align: center; padding: 24px; font-size: 20px; line-height: 1.4; }
+  #rotate .ico { font-size: 56px; margin-bottom: 12px; }
+  @media (orientation: portrait) and (pointer: coarse) { #rotate { display: flex; } }
+  #fatal { display: none; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 20; background: #3a0a18; color: #ffc0b8;
+    border: 2px solid #e8384f; padding: 12px 14px; font-size: 14px; white-space: pre-wrap; }
+  noscript { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; }
+</style>
+</head>
+<body>
+<div id="game" aria-label="Math Blast Arcade game"></div>
+<div id="rotate"><div class="ico">&#8635;</div>Turn your device sideways to play<br>Math Blast Arcade</div>
+<div id="fatal" role="alert"></div>
+<noscript>Math Blast Arcade needs JavaScript switched on to play.</noscript>
+
+<script>
+  // Show any start-up error on screen instead of failing silently.
+  window.addEventListener('error', function (e) {
+    var el = document.getElementById('fatal');
+    if (!el || window.MB_STARTED_OK) return;
+    el.textContent = 'Something went wrong starting the game:\n' + (e.message || e.error || 'unknown error') +
+      (e.filename ? '\n' + String(e.filename).split('/').pop() + ':' + e.lineno : '');
+    el.style.display = 'block';
+  });
+</script>
+<script src="lib/phaser.min.js"></script>
+<script src="js/assets-embedded.js"></script>
+<script src="js/config.js"></script>
+<script src="js/save.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/story.js"></script>
+<script src="js/input.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/level.js"></script>
+<script src="js/areas.js"></script>
+<script src="js/player.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/puzzles.js"></script>
+<script src="js/boss.js"></script>
+<script src="js/scene-boot.js"></script>
+<script src="js/scene-title.js"></script>
+<script src="js/scene-intro.js"></script>
+<script src="js/scene-game.js"></script>
+<script src="js/scene-hud.js"></script>
+<script src="js/scene-victory.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

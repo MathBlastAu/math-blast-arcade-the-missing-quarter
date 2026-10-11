@@ -1,0 +1,17 @@
+{
+ "images": {
+  "bg_stars": {"file": "bg/stars.png"},
+  "bg_nebula": {"file": "bg/nebula.png"},
+  "bg_planet": {"file": "bg/planet.png"},
+  "dock_far": {"file": "bg/dock_far.png"},
+  "dock_mid": {"file": "bg/dock_mid.png"},
+  "bridge_far": {"file": "bg/bridge_far.png"},
+  "bridge_mid": {"file": "bg/bridge_mid.png"},
+  "intro_station": {"file": "intro/station.png"}
+ },
+ "sheets": {
+  "shuttle": {"file": "intro/shuttle.png", "fw": 64, "fh": 32,
+   "anims": {"fly": {"frames": [0, 1, 2, 3], "fps": 12, "loop": true}},
+   "names": {"parked": 4}}
+ }
+}

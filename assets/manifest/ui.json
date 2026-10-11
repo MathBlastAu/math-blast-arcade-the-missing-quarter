@@ -1,0 +1,114 @@
+{
+ "sheets": {
+  "hud": {
+   "file": "ui/hud.png",
+   "fw": 16,
+   "fh": 16,
+   "names": {
+    "heart_full": 0,
+    "heart_empty": 1,
+    "pie0": 2,
+    "pie1": 3,
+    "pie2": 4,
+    "pie3": 5,
+    "pie4": 6,
+    "starcell": 7,
+    "starcell_empty": 8,
+    "whole": 9,
+    "key_e": 10,
+    "key_space": 11,
+    "key_left": 12,
+    "key_right": 13,
+    "key_up": 14,
+    "key_esc": 15,
+    "tap": 16,
+    "hint": 17,
+    "reset": 18,
+    "go": 19,
+    "exit": 20,
+    "music": 21,
+    "sfx": 22,
+    "voice": 23,
+    "subs": 24,
+    "pause": 25,
+    "home": 26,
+    "replay": 27,
+    "lock": 28,
+    "arrow_l": 29,
+    "arrow_r": 30,
+    "arrow_u": 31,
+    "arrow_d": 32,
+    "relax": 33,
+    "star_full": 34,
+    "star_empty": 35
+   }
+  },
+  "button": {
+   "file": "ui/button.png",
+   "fw": 24,
+   "fh": 24,
+   "slice": 8,
+   "names": {
+    "normal": 0,
+    "focus": 1,
+    "pressed": 2
+   }
+  },
+  "touch": {
+   "file": "ui/touch.png",
+   "fw": 40,
+   "fh": 40,
+   "names": {
+    "left": 0,
+    "right": 1,
+    "jump": 2,
+    "interact": 3,
+    "pause": 4,
+    "left_on": 5,
+    "right_on": 6,
+    "jump_on": 7,
+    "interact_on": 8,
+    "pause_on": 9
+   }
+  }
+ },
+ "images": {
+  "panel": {
+   "file": "ui/panel.png",
+   "slice": 8
+  },
+  "panel_holo": {
+   "file": "ui/panel_holo.png",
+   "slice": 8
+  },
+  "panel_light": {
+   "file": "ui/panel_light.png",
+   "slice": 8
+  },
+  "tag": {
+   "file": "ui/tag.png",
+   "slice": 4
+  },
+  "logo": {
+   "file": "ui/logo.png"
+  }
+ },
+ "fonts": {
+  "ui20": {
+   "png": "fonts/ui20.png",
+   "fnt": "fonts/ui20.fnt"
+  },
+  "ui28": {
+   "png": "fonts/ui28.png",
+   "fnt": "fonts/ui28.fnt"
+  },
+  "ui44": {
+   "png": "fonts/ui44.png",
+   "fnt": "fonts/ui44.fnt"
+  },
+  "pix8": {
+   "png": "fonts/pix8.png",
+   "fnt": "fonts/pix8.fnt"
+  }
+ }
+}

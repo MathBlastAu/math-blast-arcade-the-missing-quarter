@@ -1,0 +1,126 @@
+{
+ "sheets": {
+  "phantom": {
+   "file": "sprites/phantom.png",
+   "fw": 96,
+   "fh": 96,
+   "anims": {
+    "appear": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 10,
+     "loop": false
+    },
+    "float": {
+     "frames": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     "fps": 8,
+     "loop": true
+    },
+    "attack": {
+     "frames": [
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+     ],
+     "fps": 10,
+     "loop": false
+    },
+    "hurt": {
+     "frames": [
+      20,
+      21,
+      22,
+      23
+     ],
+     "fps": 12,
+     "loop": false
+    },
+    "stunned": {
+     "frames": [
+      24,
+      25,
+      26,
+      27
+     ],
+     "fps": 6,
+     "loop": true
+    },
+    "defeat": {
+     "frames": [
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   }
+  },
+  "phantom_holo": {
+   "file": "sprites/phantom_holo.png",
+   "fw": 48,
+   "fh": 48,
+   "anims": {
+    "flicker": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  }
+ },
+ "phantomMeta": {
+  "facing": "right",
+  "bodyCentre": [
+   48,
+   48
+  ],
+  "stunnedCore": {
+   "x": 48,
+   "y": 54,
+   "r": 9
+  },
+  "castHand": {
+   "x": 90,
+   "y": 45,
+   "releaseFrame": 16
+  },
+  "emblem": {
+   "x": 48,
+   "y": 46,
+   "r": 6
+  }
+ }
+}

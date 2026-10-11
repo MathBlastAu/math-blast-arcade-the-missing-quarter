@@ -1,0 +1,94 @@
+{
+ "sheets": {
+  "jake": {
+   "file": "sprites/jake.png",
+   "fw": 32,
+   "fh": 32,
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 6,
+     "loop": true
+    },
+    "run": {
+     "frames": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "fps": 14,
+     "loop": true
+    },
+    "jump": {
+     "frames": [
+      16,
+      17
+     ],
+     "fps": 8,
+     "loop": false
+    },
+    "fall": {
+     "frames": [
+      18,
+      19
+     ],
+     "fps": 8,
+     "loop": true
+    },
+    "land": {
+     "frames": [
+      20,
+      21
+     ],
+     "fps": 14,
+     "loop": false
+    },
+    "interact": {
+     "frames": [
+      22,
+      23,
+      24
+     ],
+     "fps": 8,
+     "loop": true
+    },
+    "celebrate": {
+     "frames": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32
+     ],
+     "fps": 10,
+     "loop": true
+    },
+    "hurt": {
+     "frames": [
+      33,
+      34
+     ],
+     "fps": 8,
+     "loop": false
+    }
+   }
+  }
+ }
+}

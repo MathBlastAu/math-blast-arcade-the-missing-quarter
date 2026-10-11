@@ -1,0 +1,21 @@
+{
+ "images": {
+  "tiles_dock": {
+   "file": "tiles/tiles_dock.png"
+  },
+  "tiles_bridge": {
+   "file": "tiles/tiles_bridge.png"
+  },
+  "tiles_reactor": {
+   "file": "tiles/tiles_reactor.png"
+  },
+  "tiles_zerog": {
+   "file": "tiles/tiles_zerog.png"
+  },
+  "tiles_boss": {
+   "file": "tiles/tiles_boss.png"
+  }
+ },
+ "tileSize": 16,
+ "tileCols": 16
+}

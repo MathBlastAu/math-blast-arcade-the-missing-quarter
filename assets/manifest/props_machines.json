@@ -1,0 +1,345 @@
+{
+ "sheets": {
+  "door": {
+   "file": "sprites/door.png",
+   "fw": 32,
+   "fh": 48,
+   "anims": {
+    "open": {
+     "frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 14,
+     "loop": false
+    }
+   },
+   "names": {
+    "locked": 0,
+    "unlocked": 1,
+    "open": 7
+   }
+  },
+  "checkpoint": {
+   "file": "sprites/checkpoint.png",
+   "fw": 24,
+   "fh": 40,
+   "anims": {
+    "off": {
+     "frames": [
+      0
+     ],
+     "fps": 1,
+     "loop": false
+    },
+    "activate": {
+     "frames": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 12,
+     "loop": false
+    },
+    "on": {
+     "frames": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  "mplat": {
+   "file": "sprites/mplat.png",
+   "fw": 48,
+   "fh": 16,
+   "anims": {
+    "hover": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  },
+  "spring": {
+   "file": "sprites/spring.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "idle": {
+     "frames": [
+      0
+     ],
+     "fps": 1,
+     "loop": false
+    },
+    "bounce": {
+     "frames": [
+      1,
+      2,
+      3,
+      4
+     ],
+     "fps": 18,
+     "loop": false
+    }
+   }
+  },
+  "console": {
+   "file": "sprites/console.png",
+   "fw": 24,
+   "fh": 32,
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 6,
+     "loop": true
+    },
+    "active": {
+     "frames": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 10,
+     "loop": true
+    },
+    "done": {
+     "frames": [
+      8,
+      9
+     ],
+     "fps": 4,
+     "loop": true
+    }
+   }
+  },
+  "fblock": {
+   "file": "sprites/fblock.png",
+   "fw": 32,
+   "fh": 32,
+   "names": {
+    "plus": 0,
+    "minus": 1,
+    "neutral": 2,
+    "off": 3
+   }
+  },
+  "lever": {
+   "file": "sprites/lever.png",
+   "fw": 24,
+   "fh": 24,
+   "names": {
+    "off": 0,
+    "mid": 1,
+    "on": 2
+   }
+  },
+  "tank4": {
+   "file": "sprites/tank4.png",
+   "fw": 40,
+   "fh": 72,
+   "names": {
+    "q0": 0,
+    "q1": 1,
+    "q2": 2,
+    "q3": 3,
+    "q4": 4
+   }
+  },
+  "liquid_top": {
+   "file": "sprites/liquid_top.png",
+   "fw": 24,
+   "fh": 6,
+   "anims": {
+    "wave": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  "bridge_emitter": {
+   "file": "sprites/bridge_emitter.png",
+   "fw": 24,
+   "fh": 40,
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": true
+    },
+    "off": {
+     "frames": [
+      4
+     ],
+     "fps": 1,
+     "loop": false
+    }
+   }
+  },
+  "bridge_seg": {
+   "file": "sprites/bridge_seg.png",
+   "fw": 16,
+   "fh": 12,
+   "anims": {
+    "flow": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  "cannon": {
+   "file": "sprites/cannon.png",
+   "fw": 64,
+   "fh": 48,
+   "anims": {
+    "idle": {
+     "frames": [
+      0,
+      1
+     ],
+     "fps": 4,
+     "loop": true
+    },
+    "charge": {
+     "frames": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 10,
+     "loop": true
+    },
+    "fire": {
+     "frames": [
+      6,
+      7,
+      8,
+      9
+     ],
+     "fps": 14,
+     "loop": false
+    }
+   }
+  },
+  "beam": {
+   "file": "sprites/beam.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "flow": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 16,
+     "loop": true
+    }
+   }
+  },
+  "holo_proj": {
+   "file": "sprites/holo_proj.png",
+   "fw": 32,
+   "fh": 16,
+   "anims": {
+    "on": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  }
+ },
+ "images": {
+  "reactor_back": {
+   "file": "props/reactor_back.png"
+  },
+  "reactor_front": {
+   "file": "props/reactor_front.png"
+  }
+ },
+ "meta": {
+  "fblock_display": {
+   "x": 5,
+   "y": 6,
+   "w": 22,
+   "h": 20
+  },
+  "reactor_tube": {
+   "x": 20,
+   "y": 16,
+   "w": 24,
+   "h": 80
+  },
+  "tank4_sections": [
+   {
+    "y": 9,
+    "h": 12
+   },
+   {
+    "y": 24,
+    "h": 12
+   },
+   {
+    "y": 39,
+    "h": 12
+   },
+   {
+    "y": 54,
+    "h": 12
+   }
+  ],
+  "bridge": "emitter stands on the ledge, its right edge at the gap; planks start there with their top row on the floor line (emitter frame bottom)",
+  "cannon_muzzle": {
+   "x": 32,
+   "y": 2
+  }
+ }
+}

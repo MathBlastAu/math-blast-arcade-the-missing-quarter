@@ -1,0 +1,22 @@
+{
+ "images": {
+  "reactor_far": {
+   "file": "bg/reactor_far.png"
+  },
+  "reactor_mid": {
+   "file": "bg/reactor_mid.png"
+  },
+  "zerog_far": {
+   "file": "bg/zerog_far.png"
+  },
+  "zerog_mid": {
+   "file": "bg/zerog_mid.png"
+  },
+  "boss_far": {
+   "file": "bg/boss_far.png"
+  },
+  "boss_mid": {
+   "file": "bg/boss_mid.png"
+  }
+ }
+}

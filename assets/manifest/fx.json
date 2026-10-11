@@ -1,0 +1,259 @@
+{
+ "sheets": {
+  "quarter": {
+   "file": "sprites/quarter.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "spin": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 12,
+     "loop": true
+    }
+   }
+  },
+  "starcell": {
+   "file": "sprites/starcell.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "spin": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  },
+  "qkey": {
+   "file": "sprites/qkey.png",
+   "fw": 24,
+   "fh": 24,
+   "anims": {
+    "glow": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  },
+  "missingq": {
+   "file": "sprites/missingq.png",
+   "fw": 32,
+   "fh": 32,
+   "anims": {
+    "glow": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  },
+  "heart": {
+   "file": "sprites/heart.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "beat": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 8,
+     "loop": true
+    }
+   }
+  },
+  "fx_poof": {
+   "file": "sprites/fx_poof.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 18,
+     "loop": false
+    }
+   }
+  },
+  "fx_boom": {
+   "file": "sprites/fx_boom.png",
+   "fw": 48,
+   "fh": 48,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "fps": 18,
+     "loop": false
+    }
+   }
+  },
+  "fx_ring": {
+   "file": "sprites/fx_ring.png",
+   "fw": 48,
+   "fh": 48,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "fps": 20,
+     "loop": false
+    }
+   }
+  },
+  "fx_spark": {
+   "file": "sprites/fx_spark.png",
+   "fw": 8,
+   "fh": 8,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 16,
+     "loop": false
+    }
+   }
+  },
+  "fx_dust": {
+   "file": "sprites/fx_dust.png",
+   "fw": 8,
+   "fh": 8,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 14,
+     "loop": false
+    }
+   }
+  },
+  "fx_star": {
+   "file": "sprites/fx_star.png",
+   "fw": 8,
+   "fh": 8,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "fps": 10,
+     "loop": true
+    }
+   }
+  },
+  "fx_collect": {
+   "file": "sprites/fx_collect.png",
+   "fw": 16,
+   "fh": 16,
+   "anims": {
+    "play": {
+     "frames": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ],
+     "fps": 20,
+     "loop": false
+    }
+   }
+  },
+  "fx_debris": {
+   "file": "sprites/fx_debris.png",
+   "fw": 8,
+   "fh": 8,
+   "names": {
+    "steel_a": 0,
+    "steel_b": 1,
+    "cyan": 2,
+    "pink": 3
+   }
+  }
+ },
+ "images": {
+  "glow": {
+   "file": "fx/glow.png"
+  },
+  "glow_soft": {
+   "file": "fx/glow_soft.png"
+  },
+  "lightcone": {
+   "file": "fx/lightcone.png"
+  },
+  "vignette": {
+   "file": "bg/vignette.png"
+  },
+  "pixel": {
+   "file": "fx/pixel.png"
+  }
+ }
+}
